@@ -26,6 +26,22 @@
 		048C16112A3256340083D411 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C160B2A3256340083D411 /* DetailsInteractor.swift */; };
 		048C16122A3256340083D411 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C160C2A3256340083D411 /* DetailsViewController.xib */; };
 		048C16132A3256340083D411 /* DetailsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C160D2A3256340083D411 /* DetailsWireFrame.swift */; };
+		048C161C2A32592E0083D411 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C161B2A32592E0083D411 /* UIViewController+Extension.swift */; };
+		048C161E2A3259430083D411 /* Error+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C161D2A3259430083D411 /* Error+extension.swift */; };
+		048C16202A32595C0083D411 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C161F2A32595C0083D411 /* ConfigurableCell.swift */; };
+		048C16222A32596E0083D411 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16212A32596E0083D411 /* ReusableCell.swift */; };
+		048C16242A32598F0083D411 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16232A32598F0083D411 /* UITableView+Register.swift */; };
+		048C16262A3259BC0083D411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16252A3259BC0083D411 /* Constants.swift */; };
+		048C16282A3259D60083D411 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16272A3259D60083D411 /* RequestError.swift */; };
+		048C162A2A325A400083D411 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16292A325A400083D411 /* RequestMethod.swift */; };
+		048C162C2A325A550083D411 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C162B2A325A550083D411 /* RequestProtocol.swift */; };
+		048C162E2A325A710083D411 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C162D2A325A710083D411 /* Endpoint.swift */; };
+		048C16302A325A870083D411 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C162F2A325A870083D411 /* Feed.swift */; };
+		048C16322A325BCE0083D411 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16312A325BCE0083D411 /* AppEnvironment.swift */; };
+		048C16342A325BFE0083D411 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16332A325BFE0083D411 /* BaseViewController.swift */; };
+		048C16362A325C140083D411 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16352A325C140083D411 /* Localizable.swift */; };
+		048C16382A325C1E0083D411 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16372A325C1E0083D411 /* LocalizableString.swift */; };
+		048C163A2A325C2E0083D411 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048C16392A325C2E0083D411 /* Localizable.strings */; };
 		F62C9CFD10AB7AAC17862039 /* Pods_ChallengeMeli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +86,22 @@
 		048C160B2A3256340083D411 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		048C160C2A3256340083D411 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		048C160D2A3256340083D411 /* DetailsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWireFrame.swift; sourceTree = "<group>"; };
+		048C161B2A32592E0083D411 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		048C161D2A3259430083D411 /* Error+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+extension.swift"; sourceTree = "<group>"; };
+		048C161F2A32595C0083D411 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		048C16212A32596E0083D411 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		048C16232A32598F0083D411 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		048C16252A3259BC0083D411 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		048C16272A3259D60083D411 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		048C16292A325A400083D411 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		048C162B2A325A550083D411 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		048C162D2A325A710083D411 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		048C162F2A325A870083D411 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		048C16312A325BCE0083D411 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		048C16332A325BFE0083D411 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		048C16352A325C140083D411 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		048C16372A325C1E0083D411 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		048C16392A325C2E0083D411 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04965E72752CCC2C7037AF0F /* Pods-ChallengeMeli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.debug.xcconfig"; sourceTree = "<group>"; };
 		1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9830B5DBA6B0F87EF2470F2C /* Pods-ChallengeMeli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.release.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +262,7 @@
 		048C15EC2A3252B70083D411 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				048C16332A325BFE0083D411 /* BaseViewController.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -237,6 +270,9 @@
 		048C15ED2A3252BF0083D411 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				048C16352A325C140083D411 /* Localizable.swift */,
+				048C16372A325C1E0083D411 /* LocalizableString.swift */,
+				048C16392A325C2E0083D411 /* Localizable.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -244,6 +280,7 @@
 		048C15EE2A3252C70083D411 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				048C16312A325BCE0083D411 /* AppEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -253,6 +290,8 @@
 			children = (
 				048C15F22A3253CB0083D411 /* Request */,
 				048C15F12A3253900083D411 /* Error */,
+				048C162D2A325A710083D411 /* Endpoint.swift */,
+				048C162F2A325A870083D411 /* Feed.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -260,6 +299,7 @@
 		048C15F02A3252DC0083D411 /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
+				048C16252A3259BC0083D411 /* Constants.swift */,
 			);
 			path = Parameters;
 			sourceTree = "<group>";
@@ -267,6 +307,7 @@
 		048C15F12A3253900083D411 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				048C16272A3259D60083D411 /* RequestError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -274,6 +315,8 @@
 		048C15F22A3253CB0083D411 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				048C16292A325A400083D411 /* RequestMethod.swift */,
+				048C162B2A325A550083D411 /* RequestProtocol.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -281,6 +324,7 @@
 		048C15F32A3253D60083D411 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				048C161B2A32592E0083D411 /* UIViewController+Extension.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -288,6 +332,7 @@
 		048C15F42A3253DF0083D411 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				048C161D2A3259430083D411 /* Error+extension.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -295,6 +340,8 @@
 		048C15F52A3254BD0083D411 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				048C161F2A32595C0083D411 /* ConfigurableCell.swift */,
+				048C16212A32596E0083D411 /* ReusableCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -302,6 +349,7 @@
 		048C15F62A3254C50083D411 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				048C16232A32598F0083D411 /* UITableView+Register.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -511,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048C163A2A325C2E0083D411 /* Localizable.strings in Resources */,
 				048C15C22A32510A0083D411 /* LaunchScreen.storyboard in Resources */,
 				048C15BF2A32510A0083D411 /* Assets.xcassets in Resources */,
 				048C16122A3256340083D411 /* DetailsViewController.xib in Resources */,
@@ -581,18 +630,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048C16222A32596E0083D411 /* ReusableCell.swift in Sources */,
+				048C16202A32595C0083D411 /* ConfigurableCell.swift in Sources */,
 				048C15FD2A3254E20083D411 /* HomeInteractorDependencies.swift in Sources */,
+				048C161C2A32592E0083D411 /* UIViewController+Extension.swift in Sources */,
 				048C16132A3256340083D411 /* DetailsWireFrame.swift in Sources */,
+				048C16322A325BCE0083D411 /* AppEnvironment.swift in Sources */,
 				048C16022A3254E20083D411 /* HomeWireFrame.swift in Sources */,
+				048C162C2A325A550083D411 /* RequestProtocol.swift in Sources */,
+				048C161E2A3259430083D411 /* Error+extension.swift in Sources */,
 				048C16102A3256340083D411 /* DetailsViewController.swift in Sources */,
+				048C162A2A325A400083D411 /* RequestMethod.swift in Sources */,
+				048C16242A32598F0083D411 /* UITableView+Register.swift in Sources */,
 				048C15B62A3251090083D411 /* AppDelegate.swift in Sources */,
+				048C16382A325C1E0083D411 /* LocalizableString.swift in Sources */,
 				048C15FE2A3254E20083D411 /* HomePresenter.swift in Sources */,
 				048C15B82A3251090083D411 /* SceneDelegate.swift in Sources */,
 				048C16112A3256340083D411 /* DetailsInteractor.swift in Sources */,
 				048C15FF2A3254E20083D411 /* HomeViewController.swift in Sources */,
+				048C16282A3259D60083D411 /* RequestError.swift in Sources */,
 				048C160F2A3256340083D411 /* DetailsPresenter.swift in Sources */,
 				048C160E2A3256340083D411 /* DetailsInteractorDependencies.swift in Sources */,
+				048C16342A325BFE0083D411 /* BaseViewController.swift in Sources */,
 				048C16002A3254E20083D411 /* HomeInteractor.swift in Sources */,
+				048C16302A325A870083D411 /* Feed.swift in Sources */,
+				048C162E2A325A710083D411 /* Endpoint.swift in Sources */,
+				048C16362A325C140083D411 /* Localizable.swift in Sources */,
+				048C16262A3259BC0083D411 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
