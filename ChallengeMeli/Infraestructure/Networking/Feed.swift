@@ -6,7 +6,7 @@
 //
 
 enum Feed {
-    case listedItems(siteId: Int)
+    case listedItems(siteId: String)
 }
 
 extension Feed: Endpoint {

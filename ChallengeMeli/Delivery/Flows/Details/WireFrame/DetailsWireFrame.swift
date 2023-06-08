@@ -9,11 +9,11 @@
 import UIKit
 
 protocol DetailsWireFrameProtocol {
-   static func makeDetailsView() -> UIViewController
+    static func makeDetailsView(id: String) -> UIViewController
 }
 
 struct DetailsWireFrame: DetailsWireFrameProtocol {
-    static func makeDetailsView() -> UIViewController {
+    static func makeDetailsView(id: String) -> UIViewController {
         
         let interactorDependencies = DetailsInteractorDependencies()
         let interactor = DetailsInteractor(dependencies: interactorDependencies)

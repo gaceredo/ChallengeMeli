@@ -14,7 +14,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let contentView = HomeWireFrame.makeHomeView()
+        
+        /*
+          --- For practical purposes, the siteId and the catogoryId are placed in a burnt way ----
+         */
+        
+        let contentView = HomeWireFrame.makeHomeView(siteId: "MLA", categoryId: "MLA1055")
         let window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController(rootViewController: contentView)
         window.rootViewController = navigationController

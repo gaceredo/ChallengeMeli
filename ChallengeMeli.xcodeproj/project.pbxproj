@@ -42,6 +42,11 @@
 		048C16362A325C140083D411 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16352A325C140083D411 /* Localizable.swift */; };
 		048C16382A325C1E0083D411 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16372A325C1E0083D411 /* LocalizableString.swift */; };
 		048C163A2A325C2E0083D411 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048C16392A325C2E0083D411 /* Localizable.strings */; };
+		048C163C2A326B420083D411 /* CategoryItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C163B2A326B420083D411 /* CategoryItemsModel.swift */; };
+		048C16442A327CEA0083D411 /* HomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16422A327CEA0083D411 /* HomeItemCollectionViewCell.swift */; };
+		048C16452A327CEA0083D411 /* HomeItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C16432A327CEA0083D411 /* HomeItemCollectionViewCell.xib */; };
+		048C16482A327D620083D411 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16472A327D620083D411 /* UICollectionView+Register.swift */; };
+		048C164A2A327D890083D411 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16492A327D890083D411 /* HomeViewController+Delegate.swift */; };
 		F62C9CFD10AB7AAC17862039 /* Pods_ChallengeMeli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +107,11 @@
 		048C16352A325C140083D411 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		048C16372A325C1E0083D411 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		048C16392A325C2E0083D411 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		048C163B2A326B420083D411 /* CategoryItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsModel.swift; sourceTree = "<group>"; };
+		048C16422A327CEA0083D411 /* HomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		048C16432A327CEA0083D411 /* HomeItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		048C16472A327D620083D411 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		048C16492A327D890083D411 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		04965E72752CCC2C7037AF0F /* Pods-ChallengeMeli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.debug.xcconfig"; sourceTree = "<group>"; };
 		1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9830B5DBA6B0F87EF2470F2C /* Pods-ChallengeMeli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.release.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +201,7 @@
 		048C15E52A32523D0083D411 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				048C16462A327D520083D411 /* UICollectionView */,
 				048C15F62A3254C50083D411 /* UITableView */,
 				048C15F52A3254BD0083D411 /* UITableViewCell */,
 				048C15F42A3253DF0083D411 /* Error */,
@@ -357,6 +368,7 @@
 		048C16032A3254ED0083D411 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				048C163B2A326B420083D411 /* CategoryItemsModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -381,8 +393,10 @@
 		048C16062A32550C0083D411 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048C163D2A327BDD0083D411 /* Cells */,
 				048C15F92A3254E20083D411 /* HomeViewController.swift */,
 				048C15FB2A3254E20083D411 /* HomeViewController.xib */,
+				048C16492A327D890083D411 /* HomeViewController+Delegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +448,23 @@
 				048C160D2A3256340083D411 /* DetailsWireFrame.swift */,
 			);
 			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		048C163D2A327BDD0083D411 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				048C16422A327CEA0083D411 /* HomeItemCollectionViewCell.swift */,
+				048C16432A327CEA0083D411 /* HomeItemCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		048C16462A327D520083D411 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				048C16472A327D620083D411 /* UICollectionView+Register.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		6B62DB27A139846655937C5F /* Pods */ = {
@@ -561,6 +592,7 @@
 			files = (
 				048C163A2A325C2E0083D411 /* Localizable.strings in Resources */,
 				048C15C22A32510A0083D411 /* LaunchScreen.storyboard in Resources */,
+				048C16452A327CEA0083D411 /* HomeItemCollectionViewCell.xib in Resources */,
 				048C15BF2A32510A0083D411 /* Assets.xcassets in Resources */,
 				048C16122A3256340083D411 /* DetailsViewController.xib in Resources */,
 				048C16012A3254E20083D411 /* HomeViewController.xib in Resources */,
@@ -636,6 +668,7 @@
 				048C161C2A32592E0083D411 /* UIViewController+Extension.swift in Sources */,
 				048C16132A3256340083D411 /* DetailsWireFrame.swift in Sources */,
 				048C16322A325BCE0083D411 /* AppEnvironment.swift in Sources */,
+				048C164A2A327D890083D411 /* HomeViewController+Delegate.swift in Sources */,
 				048C16022A3254E20083D411 /* HomeWireFrame.swift in Sources */,
 				048C162C2A325A550083D411 /* RequestProtocol.swift in Sources */,
 				048C161E2A3259430083D411 /* Error+extension.swift in Sources */,
@@ -647,13 +680,16 @@
 				048C15FE2A3254E20083D411 /* HomePresenter.swift in Sources */,
 				048C15B82A3251090083D411 /* SceneDelegate.swift in Sources */,
 				048C16112A3256340083D411 /* DetailsInteractor.swift in Sources */,
+				048C16482A327D620083D411 /* UICollectionView+Register.swift in Sources */,
 				048C15FF2A3254E20083D411 /* HomeViewController.swift in Sources */,
 				048C16282A3259D60083D411 /* RequestError.swift in Sources */,
 				048C160F2A3256340083D411 /* DetailsPresenter.swift in Sources */,
 				048C160E2A3256340083D411 /* DetailsInteractorDependencies.swift in Sources */,
 				048C16342A325BFE0083D411 /* BaseViewController.swift in Sources */,
+				048C16442A327CEA0083D411 /* HomeItemCollectionViewCell.swift in Sources */,
 				048C16002A3254E20083D411 /* HomeInteractor.swift in Sources */,
 				048C16302A325A870083D411 /* Feed.swift in Sources */,
+				048C163C2A326B420083D411 /* CategoryItemsModel.swift in Sources */,
 				048C162E2A325A710083D411 /* Endpoint.swift in Sources */,
 				048C16362A325C140083D411 /* Localizable.swift in Sources */,
 				048C16262A3259BC0083D411 /* Constants.swift in Sources */,
