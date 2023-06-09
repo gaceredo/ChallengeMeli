@@ -20,4 +20,15 @@ class DetailsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        detailsItem()
+    }
+    
+    func detailsItem() {
+        presenter.detailsItem(completion: { [weak self] isSuccess in
+            guard let self = self else { return }
+            
+        })
+    }
 }

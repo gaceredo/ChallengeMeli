@@ -49,6 +49,8 @@
 		048C164A2A327D890083D411 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16492A327D890083D411 /* HomeViewController+Delegate.swift */; };
 		04C5325D2A3297E4005046C5 /* HomeViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5325C2A3297E4005046C5 /* HomeViewController+Preview.swift */; };
 		04C532602A32CAC4005046C5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5325F2A32CAC4005046C5 /* Alert.swift */; };
+		04C532622A33890A005046C5 /* DetailsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C532612A33890A005046C5 /* DetailsItemModel.swift */; };
+		04C532642A33892B005046C5 /* DescriptionItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C532632A33892B005046C5 /* DescriptionItemModel.swift */; };
 		F62C9CFD10AB7AAC17862039 /* Pods_ChallengeMeli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,8 @@
 		04965E72752CCC2C7037AF0F /* Pods-ChallengeMeli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.debug.xcconfig"; sourceTree = "<group>"; };
 		04C5325C2A3297E4005046C5 /* HomeViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Preview.swift"; sourceTree = "<group>"; };
 		04C5325F2A32CAC4005046C5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		04C532612A33890A005046C5 /* DetailsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsItemModel.swift; sourceTree = "<group>"; };
+		04C532632A33892B005046C5 /* DescriptionItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionItemModel.swift; sourceTree = "<group>"; };
 		1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9830B5DBA6B0F87EF2470F2C /* Pods-ChallengeMeli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.release.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +422,8 @@
 		048C16142A32563E0083D411 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				04C532612A33890A005046C5 /* DetailsItemModel.swift */,
+				04C532632A33892B005046C5 /* DescriptionItemModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -677,8 +683,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C5325D2A3297E4005046C5 /* HomeViewController+Preview.swift in Sources */,
+				04C532622A33890A005046C5 /* DetailsItemModel.swift in Sources */,
 				048C16222A32596E0083D411 /* ReusableCell.swift in Sources */,
 				048C16202A32595C0083D411 /* ConfigurableCell.swift in Sources */,
+				04C532642A33892B005046C5 /* DescriptionItemModel.swift in Sources */,
 				048C15FD2A3254E20083D411 /* HomeInteractorDependencies.swift in Sources */,
 				048C161C2A32592E0083D411 /* UIViewController+Extension.swift in Sources */,
 				048C16132A3256340083D411 /* DetailsWireFrame.swift in Sources */,

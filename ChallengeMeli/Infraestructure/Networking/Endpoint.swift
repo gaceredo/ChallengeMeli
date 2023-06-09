@@ -33,7 +33,9 @@ extension Endpoint {
     
     func request(query items: [URLQueryItem]) -> URLRequest {
         var url = urlComponents
-        url.queryItems = items
+        if !items.isEmpty {
+            url.queryItems = items
+        }
         var request = URLRequest(url: url.url!)
         request.allHTTPHeaderFields = headers
         return request

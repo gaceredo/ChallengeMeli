@@ -17,7 +17,7 @@ struct DetailsWireFrame: DetailsWireFrameProtocol {
         
         let interactorDependencies = DetailsInteractorDependencies()
         let interactor = DetailsInteractor(dependencies: interactorDependencies)
-        let presenter = DetailsPresenter(interactor: interactor)
+        let presenter = DetailsPresenter(interactor: interactor, itemId: id)
         let view = DetailsViewController(presenter: presenter)
         
         return view
