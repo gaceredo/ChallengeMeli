@@ -25,6 +25,7 @@ final class HomeInteractor: HomeInteractorProtocol {
     func listedItems(siteId: String,
                      query: [URLQueryItem],
                      completion: @escaping (Result<CategoryItemsModel, RequestError>) -> Void) {
+        
         cancellable = dependencies.listedItems(query: query, .listedItems(siteId: siteId))
             .sink(receiveCompletion: { result in
                 switch result {

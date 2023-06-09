@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var presenter: HomePresenter
@@ -32,22 +32,22 @@ class HomeViewController: UIViewController {
         showHud()
         presenter.listedItems { [weak self] isSuccess in
             guard let self = self else { return }
-            if isSuccess {
-                collectionView.reloadData()
-            } else {
-                
-            }
+            isSuccess ? collectionView.reloadData() : Alert.showEmptyAlert(on: self, handler: reloadList)
             hideHud()
         }
     }
     
+    @objc func reloadList(_ sender: UIAlertAction) {
+        listedItems()
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 18)
     }
     
     func setupUI() {
-        title = "Items de Meli"
+        title = Localizable.HomeView.title.localized
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerNib(HomeItemCollectionViewCell.self)

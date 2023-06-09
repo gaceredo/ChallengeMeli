@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+enum Localizable {
+    
+    enum HomeView: String, LocalizableString {
+        var screen: String { "HomeView" }
+        case title
+        case offset
+        case category
+        case emptyResult
+        case alertTitle
+        case alertButton
+    }
+    
+}

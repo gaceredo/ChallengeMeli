@@ -20,11 +20,13 @@ final class HomePresenter: HomePresenterProtocol {
     var isLoding: Bool = false
     var offset: Int = 0
     var elements: [HomeItemModel] = []
+    
     var result: CategoryItemsModel? = nil {
         didSet {
             self.elements.append(contentsOf: result?.results ?? [])
         }
     }
+    
     private var siteId: String
     private var categoryId: String
     private let interactor: HomeInteractorProtocol
@@ -38,9 +40,9 @@ final class HomePresenter: HomePresenterProtocol {
     
     func listedItems(completion: @escaping (Bool) -> Void) {
        
+        let query = [URLQueryItem(name: Localizable.HomeView.category.localized, value: categoryId),
+                     URLQueryItem(name: Localizable.HomeView.offset.localized, value: offset.description)]
         
-        let query = [URLQueryItem(name: "category", value: categoryId),
-                     URLQueryItem(name: "offset", value: offset.description)]
         lodingTogler()
         interactor.listedItems(siteId: siteId, query: query) { [weak self] result in
             guard let self = self else { return }
@@ -49,7 +51,7 @@ final class HomePresenter: HomePresenterProtocol {
             case .success(let success):
                 self.result = success
                 self.offset = success.paging.limit + success.paging.offset
-                completion(true)
+                completion(!success.results.isEmpty)
             case .failure(let failure):
                 self.error = failure
                 completion(false)

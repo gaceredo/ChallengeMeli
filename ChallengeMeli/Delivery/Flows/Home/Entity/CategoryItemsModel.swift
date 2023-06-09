@@ -11,15 +11,12 @@ struct CategoryItemsModel: Decodable {
     let results: [HomeItemModel]
     let site_id: String
     let paging: PagingItemsModel
-    
 }
 
 struct HomeItemModel: Decodable {
     let id: String
     let title: String
     let thumbnail: String?
-
-    
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

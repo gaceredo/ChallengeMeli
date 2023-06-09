@@ -47,6 +47,8 @@
 		048C16452A327CEA0083D411 /* HomeItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048C16432A327CEA0083D411 /* HomeItemCollectionViewCell.xib */; };
 		048C16482A327D620083D411 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16472A327D620083D411 /* UICollectionView+Register.swift */; };
 		048C164A2A327D890083D411 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C16492A327D890083D411 /* HomeViewController+Delegate.swift */; };
+		04C5325D2A3297E4005046C5 /* HomeViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5325C2A3297E4005046C5 /* HomeViewController+Preview.swift */; };
+		04C532602A32CAC4005046C5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5325F2A32CAC4005046C5 /* Alert.swift */; };
 		F62C9CFD10AB7AAC17862039 /* Pods_ChallengeMeli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		048C16472A327D620083D411 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
 		048C16492A327D890083D411 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		04965E72752CCC2C7037AF0F /* Pods-ChallengeMeli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.debug.xcconfig"; sourceTree = "<group>"; };
+		04C5325C2A3297E4005046C5 /* HomeViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Preview.swift"; sourceTree = "<group>"; };
+		04C5325F2A32CAC4005046C5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		1B9C79FE0500B97C035BD203 /* Pods_ChallengeMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9830B5DBA6B0F87EF2470F2C /* Pods-ChallengeMeli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMeli.release.xcconfig"; path = "Target Support Files/Pods-ChallengeMeli/Pods-ChallengeMeli.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +226,7 @@
 		048C15E72A3252510083D411 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				04C5325E2A32CAB6005046C5 /* Alert */,
 				048C15EE2A3252C70083D411 /* Environment */,
 				048C15ED2A3252BF0083D411 /* Localizable */,
 				048C15EC2A3252B70083D411 /* BaseClasses */,
@@ -397,6 +402,7 @@
 				048C15F92A3254E20083D411 /* HomeViewController.swift */,
 				048C15FB2A3254E20083D411 /* HomeViewController.xib */,
 				048C16492A327D890083D411 /* HomeViewController+Delegate.swift */,
+				04C5325C2A3297E4005046C5 /* HomeViewController+Preview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +471,14 @@
 				048C16472A327D620083D411 /* UICollectionView+Register.swift */,
 			);
 			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		04C5325E2A32CAB6005046C5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				04C5325F2A32CAC4005046C5 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		6B62DB27A139846655937C5F /* Pods */ = {
@@ -662,6 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C5325D2A3297E4005046C5 /* HomeViewController+Preview.swift in Sources */,
 				048C16222A32596E0083D411 /* ReusableCell.swift in Sources */,
 				048C16202A32595C0083D411 /* ConfigurableCell.swift in Sources */,
 				048C15FD2A3254E20083D411 /* HomeInteractorDependencies.swift in Sources */,
@@ -691,6 +706,7 @@
 				048C16302A325A870083D411 /* Feed.swift in Sources */,
 				048C163C2A326B420083D411 /* CategoryItemsModel.swift in Sources */,
 				048C162E2A325A710083D411 /* Endpoint.swift in Sources */,
+				04C532602A32CAC4005046C5 /* Alert.swift in Sources */,
 				048C16362A325C140083D411 /* Localizable.swift in Sources */,
 				048C16262A3259BC0083D411 /* Constants.swift in Sources */,
 			);
