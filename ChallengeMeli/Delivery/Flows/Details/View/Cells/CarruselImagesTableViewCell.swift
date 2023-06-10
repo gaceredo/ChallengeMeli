@@ -54,7 +54,7 @@ extension CarruselImagesTableViewCell: UICollectionViewDataSource {
 
 extension CarruselImagesTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width - 20 // Ajusta el espacio según tus necesidades
+        let width = collectionView.frame.width - 20
         let height = collectionView.frame.height
         return CGSize(width: width, height: height)
     }
