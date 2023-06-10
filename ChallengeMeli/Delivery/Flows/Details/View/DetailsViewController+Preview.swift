@@ -1,17 +1,17 @@
 //
-//  HomeViewController+Preview.swift
+//  DetailsViewController+Preview.swift
 //  ChallengeMeli
 //
-//  Created by Gustavo Aceredo on 8/6/23.
+//  Created by Gustavo Aceredo on 10/6/23.
 //
 
 import SwiftUI
 
 /* Validate the successful case */
 
-private struct HomeViewSuccessControllerRepresentable: UIViewControllerRepresentable {
+private struct DetailsViewSuccessControllerRepresentable: UIViewControllerRepresentable {
     
-    let viewController = HomeWireFrame.makeHomeView(siteId: "MLA", categoryId: "MLA1055")
+    let viewController = DetailsWireFrame.makeDetailsView(id: "MLA1116667053")
     func makeUIViewController(context: Context) -> some UIViewController {
         return viewController
     }
@@ -21,9 +21,9 @@ private struct HomeViewSuccessControllerRepresentable: UIViewControllerRepresent
 
 /* Validate the empty result case */
 
-private struct HomeViewEmptyControllerRepresentable: UIViewControllerRepresentable {
+private struct DetailsViewEmptyControllerRepresentable: UIViewControllerRepresentable {
     
-    let viewController = HomeWireFrame.makeHomeView(siteId: "MLU", categoryId: "MLA1055")
+    let viewController = DetailsWireFrame.makeDetailsView(id: "")
 
     func makeUIViewController(context: Context) -> some UIViewController {
         return viewController
@@ -32,11 +32,11 @@ private struct HomeViewEmptyControllerRepresentable: UIViewControllerRepresentab
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) { }
 }
 
-struct HomeViewControllerPreivew: PreviewProvider {
+struct DetailsViewControllerPreivew: PreviewProvider {
     static var previews: some View {
         Group {
-            HomeViewSuccessControllerRepresentable()
-            HomeViewEmptyControllerRepresentable()
+            DetailsViewSuccessControllerRepresentable()
+            DetailsViewEmptyControllerRepresentable()
         }
     }
 }
