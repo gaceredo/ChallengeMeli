@@ -10,8 +10,8 @@ import Kingfisher
 
 class HomeItemCollectionViewCell: UICollectionViewCell, ConfigurableCell {
 
-    @IBOutlet weak var itemTitle: UILabel!
-    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet private weak var itemTitle: UILabel!
+    @IBOutlet private weak var itemImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class HomeItemCollectionViewCell: UICollectionViewCell, ConfigurableCell {
             let resource = ImageResource(downloadURL: url, cacheKey: data.thumbnail)
             self.itemImage.kf.setImage(with: resource)
         } else {
-            self.itemImage.image = UIImage(systemName: "photo.on.rectangle.angled")
+            self.itemImage.image = UIImage.placeholderItem
         }
     }
     

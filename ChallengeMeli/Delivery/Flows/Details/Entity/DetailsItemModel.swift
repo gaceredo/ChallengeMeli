@@ -13,10 +13,22 @@ struct DetailsItemModel: Decodable {
     let permalink: String
     let condition: String
     let price: Int
-    let currency_id: String
+    let currencyId: String
     let thumbnail: String
     let pictures: [DetailsItemPicturesModel]
     let attributes: [DetailsItemAttributesModel]
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case permalink
+        case condition
+        case price
+        case currencyId = "currency_id"
+        case thumbnail
+        case pictures
+        case attributes
+    }
 }
 
 struct DetailsItemPicturesModel: Decodable {
@@ -27,5 +39,11 @@ struct DetailsItemPicturesModel: Decodable {
 struct DetailsItemAttributesModel: Decodable {
     let id: String
     let name: String
-    let value_name: String
+    let valueName: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case valueName = "value_name"
+    }
 }

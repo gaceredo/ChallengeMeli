@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     var presenter: HomePresenter
     
     init(presenter: HomePresenter) {

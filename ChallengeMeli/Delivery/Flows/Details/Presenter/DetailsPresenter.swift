@@ -20,6 +20,7 @@ final class DetailsPresenter: DetailsPresenterProtocol, ObservableObject {
     var item: DetailsItemModel?
     var descriptionItem: DescriptionItemModel?
     var error: RequestError?
+    var cells: [CellsItem] = []
     private let interactor: DetailsInteractorProtocol
     
     init(interactor: DetailsInteractorProtocol,
@@ -35,6 +36,7 @@ final class DetailsPresenter: DetailsPresenterProtocol, ObservableObject {
             case .success(let success):
                 self.item = success.item
                 self.descriptionItem = success.description
+                self.setupCell()
                 completion(true)
             case .failure(let failure):
                 self.error = failure
@@ -42,4 +44,21 @@ final class DetailsPresenter: DetailsPresenterProtocol, ObservableObject {
             }
         }
     }
+    
+    func setupCell() {
+        cells.append(.carrusel)
+        cells.append(.price)
+        cells.append(.description)
+        if let attributes = item?.attributes,
+           !attributes.isEmpty {
+            cells.append(.attributes)
+        }
+    }
+}
+
+enum CellsItem {
+    case carrusel
+    case description
+    case price
+    case attributes
 }

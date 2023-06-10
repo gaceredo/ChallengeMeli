@@ -8,5 +8,10 @@
 import Foundation
 
 struct DescriptionItemModel: Decodable {
-    let plain_text: String
+    let plainText: String
+    
+    enum CodingKeys: String, CodingKey {
+        case plainText = "plain_text"
+    }
+    
 }

@@ -37,7 +37,7 @@ extension RequestProtocol {
             .decode(type: T.self, decoder: JSONDecoder())
             .mapError({
                 let error = $0 as? RequestError ?? RequestError.default
-                print("RESPONSE ERROR: \(JSON(error.dictionary)) \n")
+                print("RESPONSE ERROR: \($0)\n")
                 return error
             })
             .receive(on: queue)

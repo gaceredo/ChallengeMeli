@@ -9,7 +9,6 @@ import Foundation
 
 struct CategoryItemsModel: Decodable {
     let results: [HomeItemModel]
-    let site_id: String
     let paging: PagingItemsModel
 }
 
