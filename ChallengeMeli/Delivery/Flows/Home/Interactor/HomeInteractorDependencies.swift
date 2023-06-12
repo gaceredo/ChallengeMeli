@@ -12,6 +12,7 @@ import Combine
 
 protocol HomeInteractorDependenciesProtocol {
     func listedItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError>
+    func searchItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError>
 }
 
 class HomeInteractorDependencies: RequestProtocol, HomeInteractorDependenciesProtocol {
@@ -29,5 +30,7 @@ class HomeInteractorDependencies: RequestProtocol, HomeInteractorDependenciesPro
     func listedItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError> {
         execute(feedKind.request(query: query), decodingType: CategoryItemsModel.self)
     }
-    
+    func searchItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError> {
+        execute(feedKind.request(query: query), decodingType: CategoryItemsModel.self)
+    }
 }

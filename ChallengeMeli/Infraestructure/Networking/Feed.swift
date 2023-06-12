@@ -9,13 +9,14 @@ enum Feed {
     case listedItems(siteId: String)
     case detailsItem(id: String)
     case detailsDescriptionItem(id: String)
+    case searchItems(siteId: String)
 }
 
 extension Feed: Endpoint {
     
     var httpMethod: RequestMethod {
         switch self {
-        case .listedItems, .detailsDescriptionItem, .detailsItem:
+        case .listedItems, .detailsDescriptionItem, .detailsItem, .searchItems:
             return .GET
         }
     }
@@ -28,6 +29,8 @@ extension Feed: Endpoint {
             return "/items/\(id)/description"
         case .detailsItem(let id):
             return "/items/\(id)"
+        case .searchItems(let siteId):
+            return "/sites/\(siteId)/search"
         }
     }
 }

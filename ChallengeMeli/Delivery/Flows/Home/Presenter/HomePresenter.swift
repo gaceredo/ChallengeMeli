@@ -10,8 +10,9 @@ import Foundation
 import Combine
 
 protocol HomePresenterProtocol {
-    var result: CategoryItemsModel? { get set }
     var error: RequestError { get set }
+    var elements: [HomeItemModel] { get set }
+    var filterElements: [HomeItemModel] { get set }
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -20,12 +21,8 @@ final class HomePresenter: HomePresenterProtocol {
     var isLoding: Bool = false
     var offset: Int = 0
     var elements: [HomeItemModel] = []
-    
-    var result: CategoryItemsModel? = nil {
-        didSet {
-            self.elements.append(contentsOf: result?.results ?? [])
-        }
-    }
+    var filterElements: [HomeItemModel] = []
+    var isActiveSearch: Bool = false
     
     private var siteId: String
     private var categoryId: String
@@ -49,7 +46,28 @@ final class HomePresenter: HomePresenterProtocol {
             self.lodingTogler()
             switch result {
             case .success(let success):
-                self.result = success
+                self.elements.append(contentsOf: success.results)
+                self.offset = success.paging.limit + success.paging.offset
+                completion(!success.results.isEmpty)
+            case .failure(let failure):
+                self.error = failure
+                completion(false)
+            }
+        }
+    }
+   
+    func searchItems(text: String,
+                     completion: @escaping (Bool) -> Void) {
+       
+        let query = [URLQueryItem(name: "q", value: text)]
+        
+        lodingTogler()
+        interactor.searchItems(siteId: siteId, query: query) { [weak self] result in
+            guard let self = self else { return }
+            self.lodingTogler()
+            switch result {
+            case .success(let success):
+                self.filterElements.append(contentsOf: success.results)
                 self.offset = success.paging.limit + success.paging.offset
                 completion(!success.results.isEmpty)
             case .failure(let failure):
@@ -59,7 +77,13 @@ final class HomePresenter: HomePresenterProtocol {
         }
     }
     
-    func lodingTogler() {
+    
+    private func lodingTogler() {
         self.isLoding = !self.isLoding
+    }
+    func clearValues() {
+        self.offset = 0
+        self.elements = []
+        self.filterElements = []
     }
 }
