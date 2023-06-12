@@ -8,16 +8,16 @@
 import UIKit
 
 extension HomeViewController: UICollectionViewDelegate,
-                                     UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+                              UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.elements.count
+        return presenter.isActiveSearch ? presenter.filterElements.count : presenter.elements.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HomeItemCollectionViewCell = collectionView.dequeueReusableaCell(forIndexPath: indexPath)
-        let item = presenter.elements[indexPath.row]
+        let item = presenter.isActiveSearch ? presenter.filterElements[indexPath.row] : presenter.elements[indexPath.row]
         cell.configure(data: item)
         return cell
     }
@@ -34,12 +34,17 @@ extension HomeViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = presenter.elements[indexPath.row]
+        let item =  presenter.isActiveSearch ? presenter.filterElements[indexPath.row] : presenter.elements[indexPath.row]
         let controller = DetailsWireFrame.makeDetailsView(id: item.id)
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if (indexPath.row == presenter.filterElements.count - 1 && !presenter.isLoding && presenter.isActiveSearch) {
+            searchItems(text: searchBar.text ?? "")
+        }
+        
         if (indexPath.row == presenter.elements.count - 1 && !presenter.isLoding) {
             listedItems()
         }
