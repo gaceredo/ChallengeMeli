@@ -13,6 +13,12 @@ protocol HomePresenterProtocol {
     var error: RequestError { get set }
     var elements: [HomeItemModel] { get set }
     var filterElements: [HomeItemModel] { get set }
+    var isActiveSearch: Bool { get set }
+    var isLoding: Bool { get set }
+    var offset: Int { get set }
+    func clearValues()
+    func listedItems(completion: @escaping (Bool) -> Void)
+    func searchItems(text: String, completion: @escaping (Bool) -> Void)
 }
 
 final class HomePresenter: HomePresenterProtocol {
@@ -59,7 +65,8 @@ final class HomePresenter: HomePresenterProtocol {
     func searchItems(text: String,
                      completion: @escaping (Bool) -> Void) {
        
-        let query = [URLQueryItem(name: "q", value: text)]
+        let query = [URLQueryItem(name: Localizable.DetailsView.q.localized,
+                                  value: text)]
         
         lodingTogler()
         interactor.searchItems(siteId: siteId, query: query) { [weak self] result in
@@ -81,6 +88,7 @@ final class HomePresenter: HomePresenterProtocol {
     private func lodingTogler() {
         self.isLoding = !self.isLoding
     }
+
     func clearValues() {
         self.offset = 0
         self.elements = []

@@ -50,3 +50,22 @@ extension HomeViewController: UICollectionViewDelegate,
         }
     }
 }
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.titleView = nil
+        configureSearchBarButton()
+        presenter.isActiveSearch = false
+        presenter.clearValues()
+        collectionView.reloadData()
+        listedItems()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else {
+            return
+        }
+        searchItems(text: text)
+    }
+}
