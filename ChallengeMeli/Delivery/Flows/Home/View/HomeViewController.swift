@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     var presenter: HomePresenter
     
     lazy var searchBar: UISearchBar = {
@@ -89,24 +89,5 @@ class HomeViewController: BaseViewController {
     
     @objc func showSearchBar() {
         configureSearchBar()
-    }
-}
-
-extension HomeViewController: UISearchBarDelegate {
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        navigationItem.titleView = nil
-        configureSearchBarButton()
-        presenter.isActiveSearch = false
-        presenter.clearValues()
-        collectionView.reloadData()
-        listedItems()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else {
-            return
-        }
-        searchItems(text: text)
     }
 }

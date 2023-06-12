@@ -10,18 +10,24 @@ import Foundation
 import Combine
 
 protocol DetailsPresenterProtocol {
-    var result: [String] { get set }
+    var cells: [CellsItem] { get set }
+    var item: DetailsItemModel? { get set }
+    var descriptionItem: DescriptionItemModel? { get set }
+    var error: RequestError? { get set }
+    
+    func detailsItem(completion: @escaping (Bool) -> Void)
+    func setupCell()
 }
 
 final class DetailsPresenter: DetailsPresenterProtocol, ObservableObject {
     
-    var result: [String] = []
-    var itemId: String
     var item: DetailsItemModel?
     var descriptionItem: DescriptionItemModel?
     var error: RequestError?
     var cells: [CellsItem] = []
+    
     private let interactor: DetailsInteractorProtocol
+    private var itemId: String
     
     init(interactor: DetailsInteractorProtocol,
          itemId: String) {

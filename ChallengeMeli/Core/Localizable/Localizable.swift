@@ -19,4 +19,9 @@ enum Localizable {
         case alertButton
     }
     
+    enum DetailsView: String, LocalizableString {
+        var screen: String {"DetailsView"}
+        case q
+    }
+    
 }
