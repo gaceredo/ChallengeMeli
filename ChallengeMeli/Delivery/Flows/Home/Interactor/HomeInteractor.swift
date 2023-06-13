@@ -12,7 +12,6 @@ import Combine
 protocol HomeInteractorProtocol {
     func listedItems(siteId: String, query: [URLQueryItem], completion: @escaping (Result<CategoryItemsModel, RequestError>) -> Void)
     func searchItems(siteId: String, query: [URLQueryItem], completion: @escaping (Result<CategoryItemsModel, RequestError>) -> Void)
-
 }
 
 final class HomeInteractor: HomeInteractorProtocol {

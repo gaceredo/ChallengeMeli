@@ -9,7 +9,6 @@
 import Foundation
 import Combine
 
-
 protocol HomeInteractorDependenciesProtocol {
     func listedItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError>
     func searchItems(query: [URLQueryItem],_ feedKind: Feed) -> AnyPublisher<CategoryItemsModel, RequestError>

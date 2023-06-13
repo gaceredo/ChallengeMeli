@@ -10,7 +10,7 @@ import Combine
 import SwiftyJSON
 
 protocol RequestProtocol {
-    var session: URLSession { get }
+    var session: URLSession { get set }
     
     func execute<T>(_ request: URLRequest,
                     decodingType: T.Type,

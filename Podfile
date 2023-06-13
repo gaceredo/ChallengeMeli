@@ -9,6 +9,10 @@ target 'ChallengeMeli' do
   pod 'SwiftyJSON'
 end
 
+target 'ChallengeMeliTests' do
+  pod 'SwiftyJSON'
+end
+
 post_install do |installer|
   installer.pods_project.build_configurations.each do |config|
     config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
