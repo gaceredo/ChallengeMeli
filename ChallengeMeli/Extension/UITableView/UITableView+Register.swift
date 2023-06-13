@@ -8,6 +8,7 @@
 import UIKit
 
 extension UITableView {
+    
     func registerNib<T: UITableViewCell>(_: T.Type) where T: ReusableCell {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.xibName, bundle: bundle)

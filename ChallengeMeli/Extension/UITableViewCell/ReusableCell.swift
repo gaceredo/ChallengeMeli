@@ -7,12 +7,13 @@
 
 import Foundation
 
-public protocol ReusableCell {
+protocol ReusableCell {
     static var reuseIdentifier: String { get }
     static var xibName: String { get }
 }
 
-public extension ReusableCell {
+extension ReusableCell {
+    
     static var reuseIdentifier: String {
         return String(describing: self)
     }

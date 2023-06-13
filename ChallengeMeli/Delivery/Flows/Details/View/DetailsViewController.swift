@@ -24,7 +24,6 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        detailsItem()
     }
     
     func setupUI() {
@@ -37,6 +36,8 @@ class DetailsViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        detailsItem()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65.0
     }
