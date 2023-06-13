@@ -17,6 +17,7 @@ enum Localizable {
         case emptyResult
         case alertTitle
         case alertButton
+        case collectionView
     }
     
     enum DetailsView: String, LocalizableString {

@@ -71,6 +71,13 @@ class HomeViewController: BaseViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerNib(HomeItemCollectionViewCell.self)
+        configureKIF()
+    }
+    
+    func configureKIF() {
+        collectionView.accessibilityIdentifier = Localizable.HomeView.collectionView.localized
+        collectionView.accessibilityLabel = Localizable.HomeView.collectionView.localized
+              
     }
     
     func configureSearchBar() {

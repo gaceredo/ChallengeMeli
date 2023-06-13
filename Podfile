@@ -25,3 +25,8 @@ post_install do |installer|
            end
     end
 end
+
+target 'KIFTests' do
+  pod 'KIF', :configurations => ['Debug']
+  pod 'KIF/IdentifierTests', :configurations => ['Debug']
+end
