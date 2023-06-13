@@ -34,7 +34,6 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listedItems()
         setupUI()
         configureSearchBarButton()
     }
@@ -60,7 +59,13 @@ class HomeViewController: BaseViewController {
     @objc func reloadList(_ sender: UIAlertAction) {
         listedItems()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard isMovingToParent else { return }
+        listedItems()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 18)
