@@ -1,24 +1,33 @@
 PODS:
+  - KIF (3.8.9):
+    - KIF/Core (= 3.8.9)
+  - KIF/Core (3.8.9)
+  - KIF/IdentifierTests (3.8.9):
+    - KIF/Core
   - Kingfisher (7.7.0)
   - MBProgressHUD (1.2.0)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - KIF
+  - KIF/IdentifierTests
   - Kingfisher
   - MBProgressHUD
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - KIF
     - Kingfisher
     - MBProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  KIF: 7660c626b0f2d4562533590960db70a36d640558
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 0c9ad1c5acdb96144f4fd22c21a4c5624841e01d
+PODFILE CHECKSUM: b2cdd34a1611d53515522d44b833f5069e32b80b
 
 COCOAPODS: 1.11.3

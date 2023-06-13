@@ -51,6 +51,17 @@
                ReferencedContainer = "container:ChallengeMeli.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0474D64F2A38EBE800A85CEB"
+               BuildableName = "KIFTests.xctest"
+               BlueprintName = "KIFTests"
+               ReferencedContainer = "container:ChallengeMeli.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

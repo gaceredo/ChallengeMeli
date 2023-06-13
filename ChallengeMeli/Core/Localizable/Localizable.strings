@@ -12,6 +12,7 @@
 "HomeView.emptyResult" = "No tenemos nada para mostrar";
 "HomeView.alertTitle" = "Upps...";
 "HomeView.alertButton" = "Aceptar";
+"HomeView.collectionView" = "collectionView";
 
 "DetailsView.q" = "q";
 
